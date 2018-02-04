@@ -12,12 +12,53 @@
 
       <form class="" action="index.html" method="post">
         <h1>Sign up</h1>
-        <input type="text" id="name" name="user_name" >
-        <input type="email"id="mail" name="user_email">
-        <input type="password" name="user_password" id="password">
 
-        <textarea name="user_bio" id="bio"></textarea>
-        <button type="submit">Sign Up</button>
+        <fieldset>
+
+          <legend><span class="number">1</span> Your basic info</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" >
+
+          <label for="mail">E-mail</label>
+          <input type="email"id="mail" name="user_email">
+
+          <label for="password">Password:</label>
+          <input type="password" name="user_password" id="password">
+
+          <label >Age:</label>
+          <input type="radio" name="user_age" value="under_18" id="under_18">
+          <label for="under_18" class="light">Under 18</label>
+                <br>
+          <input type="radio" name="user_age" value="over_18" id="over_18">
+          <label for="over_18" class="light">18 or older</label>
+
+        </fieldset>
+        <fieldset>
+          <legend><span class="number">2</span> Your profile</legend>
+
+          <label for="bio">Bio:</label>
+          <textarea name="user_bio" id="bio"></textarea>
+
+          <label for="job">Job role:</label>
+          <select id="job" name="user_job">
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="back_end_developer">Back-End Developer</option>
+            <option value="php_developer">PHP Developer</option>
+          </select>
+
+          <label>Interest:</label>
+          <input type="checkbox" id="development"name="user_interest" value="development">
+          <label class="light" for="development">Development</label><br>
+
+          <input type="checkbox" id="design"name="user_interest" value="design">
+          <label class="light" for="design">Design</label><br>
+
+          <input type="checkbox" id="business"name="user_interest" value="business">
+          <label class="light" for="business">Business</label><br>
+
+        </fieldset>
+          <button type="submit">Sign Up</button>
       </form>
 
 
